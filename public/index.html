@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+    <script src="http://backbonejs.org/backbone-min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+        <script type="text/template" id="control">
+            <h5><%= person %> is driving: <%= personCar %></h5>
+            <div >X-Coordinate:<%= x %></div>
+            <div >Y-Coordinate:<%= y %></div>
+            <div >Gas:<%= gas %></div>
+            <div id="controller">
+            <div id="upButton"><img src="https://www.wpclipart.com/signs_symbol/arrows/round/button_arrow_green_up.png"></div>
+            <div id="leftButton"><img src="https://www.wpclipart.com/signs_symbol/arrows/round/button_arrow_green_left.png"></div>
+            <div id="downButton"><img src="https://www.wpclipart.com/signs_symbol/arrows/round/button_arrow_green_down.png"></div>
+            <div id="rightButton"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/GreenButton_RightArrow.svg/2000px-GreenButton_RightArrow.svg.png"></div>
+            </div>
+        </script>
+    
+        <script type="text/template" id="playerInfo">
+        <div>
+            <button id='newP'>New Player</button>
+            <input id='createPlayer' type='text' name='Player'><br>
+            <input type='radio' name='car' value='a Tesla' id='car1'> Tesla<br>
+            <input type='radio' name='car' value='a Porsche' id='car2'> Porsche
+        </div>
+        </script>
+    
+        <script type="text/template" id="gameBoard">
+            <div></div>
+        </script>
+</head>
+
+    
+<body>
+    <h1><span id="playTitle">Player's</span>Drug Run</h1>
+    <main id="content">
+        <div id="menu">
+        <h3 id="newPlayer"><a href="#/player">New Player</a></h3>
+        <h3 id="newGame"><a href="#/game">New Game</a></h3>
+        </div>
+        <div id="player"></div>
+        <div id="coordinates"></div>
+    </main>
+</body>
+
+</html>
