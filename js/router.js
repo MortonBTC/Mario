@@ -1,6 +1,7 @@
 var Player = require('./views/player');
 var game = require('./views/game');
 var Coordinates = require('./models/coordinates');
+var endGame = require('./views/endgame');
 
 module.exports = Backbone.Router.extend({
     initialize: function (input) {
@@ -11,6 +12,7 @@ module.exports = Backbone.Router.extend({
         // url to callback func
         'player': 'newPlayer',
         'game' : 'gameView',
+        'gameover' : 'gameOver',
     },
 
     newPlayer: function () {
@@ -35,6 +37,18 @@ module.exports = Backbone.Router.extend({
         this.contentView = new game({
         el: $('#coordinates'),
         model: this.mainModel, 
+        });
+        
+        this.contentView.render();
+    },
+    
+    gameOver: function () {
+         if (this.contentView !== null) {
+            this.contentView.el.innerHTML = '';
+            this.contentView.undelegateEvents();
+        }
+        this.contentView = new endGame({
+        el: $('#coordinates'),
         });
         
         this.contentView.render();

@@ -18,3 +18,25 @@ div#controller {
     div#controller div img {
       height: 1em;
       width: 1em; }
+
+#cell-grid {
+  display: inline-block;
+  position: absolute;
+  width: 400px;
+  margin-left: 25%; }
+
+#cell-grid div {
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px; }
+
+.cells {
+  background-color: lightgray; }
+
+.energy-pod {
+  background-color: green; }
+
+.movement {
+  background-color: blue; }

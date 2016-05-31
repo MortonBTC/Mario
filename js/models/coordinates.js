@@ -3,16 +3,17 @@ module.exports = Backbone.Model.extend({
         name: 'Player',
         car: null,
         gas: 100,
-        xCoordinate: 0,
-        yCoordinate: 0,
+        xCoordinate: Math.round(Math.random() * 9),
+        yCoordinate: Math.round(Math.random() * 9),
+        xPod: Math.round(Math.random() * 9),
+        yPod: Math.round(Math.random() * 9),
         tesla: {
             intgas: 50,
-            gas: 1,
+            gas: 3,
             },
         porsche: {
-            intgas: 0,
+            intgas: 100,
             gas: 5
             }
     },
-    
 });

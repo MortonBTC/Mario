@@ -17,13 +17,15 @@ module.exports = Backbone.View.extend({
         var car2 = document.getElementById('car2');
          if (car1.checked) {
              car = car1.value;
-            this.model.set("gas", this.model.get("gas")-this.model.get("intgas"));
          }
         if (car2.checked) {
              car = car2.value;
-            this.model.set("gas", this.model.get("gas")-this.model.get("intgas"));
          }
         this.model.set("car", car);
+        var carSel = this.model.get("car").substring(2).toLowerCase();
+        var carObj = this.model.get(carSel);
+        var startgas = carObj.intgas;
+        this.model.set("gas", startgas);
         this.el.innerHTML = '';
         var title = document.getElementById('playTitle');
         title.textContent = this.model.get("name");
