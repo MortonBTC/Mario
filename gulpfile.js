@@ -2,7 +2,12 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserify = require('gulp-browserify');
 
-gulp.task('default', ['html', 'js', 'css']);
+gulp.task('default', ['html', 'js', 'css', 'images']);
+
+gulp.task('images', function () {
+    return gulp.src('./images/*')
+        .pipe(gulp.dest('./public/images'));
+});
 
 gulp.task('html', function () {
     return gulp.src('./*.html')
