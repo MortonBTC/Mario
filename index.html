@@ -12,12 +12,15 @@
             <h5><%= person %> is driving: <%= personCar %></h5>
             <div >X-Coordinate:<%= x %></div>
             <div >Y-Coordinate:<%= y %></div>
-            <div >Gas:<%= gas %></div>
+            <div >Energy:<%= gas %></div>
             <div id="controller">
             <div id="upButton"><img src="https://www.wpclipart.com/signs_symbol/arrows/round/button_arrow_green_up.png"></div>
+            <div id="controllerBottom">
             <div id="leftButton"><img src="https://www.wpclipart.com/signs_symbol/arrows/round/button_arrow_green_left.png"></div>
             <div id="downButton"><img src="https://www.wpclipart.com/signs_symbol/arrows/round/button_arrow_green_down.png"></div>
-            <div id="rightButton"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/GreenButton_RightArrow.svg/2000px-GreenButton_RightArrow.svg.png"></div>
+            <div id="rightButton"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/GreenButton_RightArrow.svg/2000px-GreenButton_RightArrow.svg.png">
+            </div>
+            </div>
             </div>
         </script>
     
@@ -34,13 +37,12 @@
             <h1>Game Over!</h1>
             <button id="newGame">New Game</button>
         </script>
-    
 
 </head>
 
     
 <body>
-    <h1><span id="playTitle">Player's</span> Mario Drive</h1>
+    <h1><span id="playTitle">Player's</span><span id="mario"> Mario </span> Drive</h1>
     <main id="content">
         <div id="menu">
         <h3 id="newPlayer"><a href="#/player">New Player</a></h3>

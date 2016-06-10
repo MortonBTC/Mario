@@ -28,7 +28,7 @@ module.exports = Backbone.View.extend({
         this.model.set("gas", startgas);
         this.el.innerHTML = '';
         var title = document.getElementById('playTitle');
-        title.textContent = this.model.get("name");
+        title.textContent = this.model.get("name")+"'s ";
         this.el.textContent = this.model.get("name") + " driving: " + this.model.get("car");
     }
     
